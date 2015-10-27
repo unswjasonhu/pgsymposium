@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="https://unsw824.wordpress.com/xmlrpc.php">
 
@@ -49,7 +50,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 
 			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
 				border: 0px;
-					margin: 0;
+				margin: 0;
 			}
 
 			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
@@ -80,8 +81,8 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 				padding: 0px 10px 0px 0px;
 			}
 		</style>
-		<meta name="applicatio:n-name" content="Postgraduate Research Symposium" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://unsw824.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="title" content="Postgraduate Research Symposium on WordPress.com" />
-<meta name="description" content="(by himal)" />
+		<meta name="application-name" content="Postgraduate Research Symposium" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://unsw824.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="title" content="Postgraduate Research Symposium on WordPress.com" />
+<meta name="description" content="(by jason)" />
 <style type="text/css" id="syntaxhighlighteranchor"></style>
 </head>
 
@@ -109,7 +110,30 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 	<header class="entry-header"><!-- .entry-meta -->
 
 	<div class="entry-content">
-<table>
+		<script>
+$(document).ready(function () {
+	$('.day').nextUntil('table.day').toggle();
+	$('.day').click(function () {
+	    var $this = $(this);
+	    $(this).nextUntil('table.day').slideToggle(100).promise().done(function () {
+	        $this.find('span').text(function (_, value) {
+	            return value == '-' ? '+' : '-'
+	        });
+	    });
+	});	
+	//$('.header').nextUntil('tr.header').toggle();
+	//$('.header').click(function () {
+	   // var $this = $(this);
+	   // $(this).nextUntil('tr.header').slideToggle(100).promise().done(function () {
+	        //$this.find('span').text(function (_, value) {
+	            //return value == '-' ? '+' : '-'
+	       // });
+	    //});
+	//});
+});
+</script>
+<div class="container">    
+<table>	
 <tbody>
 <tr>
 <td width="158">Research Themes</td>
@@ -163,11 +187,11 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 </tbody>
 </table>
-<table>
+<table class="day">
 <tbody>
 <tr>
-<td width="158"><strong>Day 1</strong></td>
-<td width="461"><strong>Monday 9<sup>th</sup> November 2015</strong></td>
+<td style="background:#990099;" width="158"><font color="white"><strong>Day 1</strong></font></td>
+<td style="background:#990099;" width="461"><font color="white"><strong>Monday 9<sup>th</sup> November 2015</strong></font></td>
 </tr>
 </tbody>
 </table>
@@ -185,8 +209,8 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 1</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>MEG02</strong></td>
 <td colspan="2" width="527"><strong>Fundamental and Enabling Sciences I (Day 1)</strong></p>
 <p>Chair:</td>
 </tr>
@@ -208,31 +232,31 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#339933;" rowspan="2" width="57"><strong>10:10</strong></td>
-<td colspan="2" width="527">FS03: Characterisation of the Interface Friction in the Cold Rolling</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS03">FS03: Characterisation of the Interface Friction in the Cold Rolling</td>
 </tr>
 <tr>
 <td width="251">Chuhan Wu</td>
 <td width="276">Mechanical &amp; Manufacturing Engineering</td>
 </tr>
 <tr>
-<td style="background:#339933;" rowspan="2" width="57"><strong>10:40</strong></td>
-<td colspan="2" width="527">FS04: Particle Engineering and Formulation of Phenolic Compounds with Dense Gas Technology</td>
+<td style="background:#339933;" rowspan="2" width="57"><strong>10:30</strong></td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS04">FS04: Particle Engineering and Formulation of Phenolic Compounds with Dense Gas Technology</td>
 </tr>
 <tr>
 <td width="251">Firman Kurniawansyah</td>
 <td width="276">Chemical Engineering</td>
 </tr>
 <tr>
-<td style="background:#CCFF99;" rowspan="2" width="57"><strong>11:00</strong></td>
-<td colspan="2" width="527">FS05: Synthesis of Hollow Capsules Using Miniemulsion Templating Based on Dopamine and Derivatives</td>
+<td style="background:#CCFF99;" rowspan="2" width="57"><strong>10:50</strong></td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS05">FS05: Synthesis of Hollow Capsules Using Miniemulsion Templating Based on Dopamine and Derivatives</td>
 </tr>
 <tr>
 <td width="251">Yujian Zhai</td>
 <td width="276">Chemical Engineering</td>
 </tr>
 <tr>
-<td style="background:#CCFF99;" rowspan="2" width="57"><strong>11:20</strong></td>
-<td colspan="2" width="527">FS06: Design and Synthesis Macromolecular Scaffolds for Carbon Monoxide Delivery</td>
+<td style="background:#CCFF99;" rowspan="2" width="57"><strong>11:10</strong></td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS06">FS06: Design and Synthesis Macromolecular Scaffolds for Carbon Monoxide Delivery</td>
 </tr>
 <tr>
 <td width="251">Diep Nguyen</td>
@@ -242,15 +266,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 2</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>ME102</strong></td>
 <td colspan="2" width="527"><strong>Digital Future I (Day 1)</strong></p>
 <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#8BC5FF;" rowspan="2" width="57"><strong>09:30</strong></td>
-<td colspan="2" width="527">DF01: Bioinformatics Prediction of Antibody-Antigen Interactions</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF01">DF01: Bioinformatics Prediction of Antibody-Antigen Interactions</td>
 </tr>
 <tr>
 <td width="246">Lingxiao Zhou</td>
@@ -258,7 +282,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#8BC5FF;" rowspan="2" width="57"><strong>09:50</strong></td>
-<td colspan="2" width="527">DF02: Elasticmark: An Elasticity Evaluation Framework for Cloud Platforms</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF02">DF02: Elasticmark: An Elasticity Evaluation Framework for Cloud Platforms</td>
 </tr>
 <tr>
 <td width="246">Sadeka Islam</td>
@@ -266,7 +290,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#8BC5FF;" rowspan="2" width="57"><strong>10:10</strong></td>
-<td colspan="2" width="527">DF03: Privacy in Social Networks</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF03">DF03: Privacy in Social Networks</td>
 </tr>
 <tr>
 <td width="246">Vidyalakshmi Vidyalakshmi</td>
@@ -274,7 +298,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#2D96FF;" rowspan="2" width="57"><strong>10:40</strong></td>
-<td colspan="2" width="527">DF04: Improving Utilization Efficiency of Training Data in Action Recognition and Object Detection</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF04">DF04: Improving Utilization Efficiency of Training Data in Action Recognition and Object Detection</td>
 </tr>
 <tr>
 <td width="246">Yingying Liu</td>
@@ -282,7 +306,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#2D96FF;" rowspan="2" width="57"><strong>11:00</strong></td>
-<td colspan="2" width="527">DF05: A New Approach to the Unscented Estimation and its Application to Real-time On-Board Navigation of Nano-Satellites Using Multi-GNSS Receiver</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF05">DF05: A New Approach to the Unscented Estimation and its Application to Real-time On-Board Navigation of Nano-Satellites Using Multi-GNSS Receiver</td>
 </tr>
 <tr>
 <td width="246">Sanat Biswas</td>
@@ -290,7 +314,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#2D96FF;" rowspan="2" width="57"><strong>11:20</strong></td>
-<td colspan="2" width="527">DF06: Analysing, Classification and Ranking of X-Ray Crystallography Images</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF06">DF06: Analysing, Classification and Ranking of X-Ray Crystallography Images</td>
 </tr>
 <tr>
 <td width="246">Thamali Lekamge</td>
@@ -300,15 +324,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 3</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>ME202</strong></td>
 <td colspan="2" width="527"><strong>Energy and Infrastructure I (Day 1)</strong></p>
 <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>09:30</strong></td>
-<td colspan="2" width="527">EI01: A Surface-enabled Aqueous Metal-ion Capacitor with Oxidised Carbon Nanotubes and Metallic Zinc Electrodes</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI01">EI01: A Surface-enabled Aqueous Metal-ion Capacitor with Oxidised Carbon Nanotubes and Metallic Zinc Electrodes</td>
 </tr>
 <tr>
 <td width="246">Yuheng Tian</td>
@@ -316,7 +340,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>09:50</strong></td>
-<td colspan="2" width="527">EI02: Plasmonic Light Trapping for Solar Cells</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI02">EI02: Plasmonic Light Trapping for Solar Cells</td>
 </tr>
 <tr>
 <td width="246">Claire Disney</td>
@@ -324,7 +348,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>10:10</strong></td>
-<td colspan="2" width="527">EI03: Concentrated Wound Interior Permanent Magnet Machines &#8211; Analysis, Modelling and Control</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI03">EI03: Concentrated Wound Interior Permanent Magnet Machines &#8211; Analysis, Modelling and Control</td>
 </tr>
 <tr>
 <td width="246">Mohammad Farshadnia</td>
@@ -332,7 +356,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>10:40</strong></td>
-<td colspan="2" width="527">EI04: Microblog Topic Emerging Outbreak Monitoring</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI04">EI04: Microblog Topic Emerging Outbreak Monitoring</td>
 </tr>
 <tr>
 <td width="246">Victor W Chu</td>
@@ -340,7 +364,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>11:00</strong></td>
-<td colspan="2" width="527">EI05: Applications of a Numerical Weather Prediction Model on Building Energy Management and Characterisation</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI05">EI05: Applications of a Numerical Weather Prediction Model on Building Energy Management and Characterisation</td>
 </tr>
 <tr>
 <td width="246">Dimitris Lazos</td>
@@ -363,14 +387,14 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 1</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>MEG02</strong></td>
 <td colspan="3" width="527"><strong>Fundamental and Enabling Sciences II (Day 1)</strong></p>
 <p>Chair:</td>
 </tr>
 <tr>
 <td style="background:#CCFF99;" rowspan="2" width="57"><strong>13:00</strong></td>
-<td colspan="2" width="527">FS07: Tackling the Efficiency Limit of Photovoltaic Cells: The Power of Colloidal Nanoparticles</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS07">FS07: Tackling the Efficiency Limit of Photovoltaic Cells: The Power of Colloidal Nanoparticles</td>
 </tr>
 <tr>
 <td width="249">Zhilong Zhang</td>
@@ -378,7 +402,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#CCFF99;" rowspan="2" width="57"><strong>13:20</strong></td>
-<td colspan="2" width="527">FS08: Micro and Macro Structure Optimization of CZTS Based Thin Film Solar Cell</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS08">FS08: Micro and Macro Structure Optimization of CZTS Based Thin Film Solar Cell</td>
 </tr>
 <tr>
 <td width="249">Fangzhou Zhou</td>
@@ -386,7 +410,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#CCFF99;" rowspan="2" width="57"><strong>13:40</strong></td>
-<td colspan="2" width="527">FS09: LiH, LiAlH4, AlH3 at Nanoscale: Synthesis, Stabilisation and Hydrogen Storage Properties</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS09">FS09: LiH, LiAlH4, AlH3 at Nanoscale: Synthesis, Stabilisation and Hydrogen Storage Properties</td>
 </tr>
 <tr>
 <td width="249">Lei Wang</td>
@@ -394,7 +418,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#CCFF99;" rowspan="2" width="57"><strong>14:00</strong></td>
-<td colspan="2" width="527">FS10: Photo-Thermal-Catalysis in Redox Reactions</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS10">FS10: Photo-Thermal-Catalysis in Redox Reactions</td>
 </tr>
 <tr>
 <td width="249">Tze Hao Tan</td>
@@ -402,7 +426,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#CCFF99;" rowspan="2" width="57"><strong>14:20</strong></td>
-<td colspan="2" width="527">FS11: TiO2-based Catalysts for Photocatalytic Hydrogen Generation: Synthesis, Application and Mechanism Studies</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS11">FS11: TiO2-based Catalysts for Photocatalytic Hydrogen Generation: Synthesis, Application and Mechanism Studies</td>
 </tr>
 <tr>
 <td width="249">Fenglong Wang</td>
@@ -417,15 +441,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 2</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>ME102</strong></td>
 <td colspan="2" width="527"><strong>Digital Future II (Day 1)</strong></p>
 <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color ="white"><strong>13:00</strong></font></td>
-<td colspan="2" width="527">DF07: Digitally-assisted Sigma Delta Modulation Circuits</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF07">DF07: Digitally-assisted Sigma Delta Modulation Circuits</td>
 </tr>
 <tr>
 <td width="244">Astria Irfansyah</td>
@@ -433,7 +457,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color ="white"><strong>13:20</strong></font></td>
-<td colspan="2" width="527">DF08: Collaborative Approach for Indoor Localization</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF08">DF08: Collaborative Approach for Indoor Localization</td>
 </tr>
 <tr>
 <td width="244">Marzieh Jalal Abadi</td>
@@ -441,7 +465,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color ="white"><strong>13:40</strong></font></td>
-<td colspan="2" width="527">DF09: Computer Vision System for Agricultural Yield Estimation</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF09">DF09: Computer Vision System for Agricultural Yield Estimation</td>
 </tr>
 <tr>
 <td width="244">Sisi Liu</td>
@@ -449,7 +473,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color ="white"><strong>14:00</strong></font></td>
-<td colspan="2" width="527">DF10: Learning and Reasoning in the Robotic Disassembly of End-of-life Electronics</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF10">DF10: Learning and Reasoning in the Robotic Disassembly of End-of-life Electronics</td>
 </tr>
 <tr>
 <td width="244">Wei Chen</td>
@@ -457,7 +481,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color ="white"><strong>14:20</strong></font></td>
-<td colspan="2" width="527">DF11: Sensorless Control of Interior Permanent Magnet Machine By Using PWM Synchronous Position Estimation Method</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF11">DF11: Sensorless Control of Interior Permanent Magnet Machine By Using PWM Synchronous Position Estimation Method</td>
 </tr>
 <tr>
 <td width="244">Deqi Guan</td>
@@ -465,7 +489,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color ="white"><strong>14:40</strong></font></td>
-<td colspan="2" width="527">DF12: Exploiting Similarity of Structure in Reinforcement Learning with QBOND</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF12">DF12: Exploiting Similarity of Structure in Reinforcement Learning with QBOND</td>
 </tr>
 <tr>
 <td width="244">Sean Harris</td>
@@ -475,15 +499,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 3</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>ME202</strong></td>
 <td colspan="2" width="527"><strong>Energy and Infrastructure II (Day 1)</strong></p>
 <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>13:00</strong></td>
-<td colspan="2" width="527">EI06: Energy-efficient Human Activity Recognition for Wearable Devices</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI06">EI06: Energy-efficient Human Activity Recognition for Wearable Devices</td>
 </tr>
 <tr>
 <td width="246">Sara Khalifa</td>
@@ -491,7 +515,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>13:20</strong></td>
-<td colspan="2" width="527">EI07: Distributed Processing for Energy Management in Smart Grids</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI07">EI07: Distributed Processing for Energy Management in Smart Grids</td>
 </tr>
 <tr>
 <td width="246">Mediwaththe Gedara</td>
@@ -499,7 +523,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>13:40</strong></td>
-<td colspan="2" width="527">EI08: Smart Grid Modelling and Control</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI08">EI08: Smart Grid Modelling and Control</td>
 </tr>
 <tr>
 <td width="246">Thai Vo</td>
@@ -507,7 +531,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>14:00</strong></td>
-<td colspan="2" width="527">EI09: Nickel Catalysts for the Carbon Dioxide Reforming of Methane: Modulating Support Properties Via Flame Spray Pyrolysis</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI09">EI09: Nickel Catalysts for the Carbon Dioxide Reforming of Methane: Modulating Support Properties Via Flame Spray Pyrolysis</td>
 </tr>
 <tr>
 <td width="246">Emma Lovell</td>
@@ -515,7 +539,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>14:20</strong></td>
-<td colspan="2" width="527">EI10: Towards High Specific Heat Molten Salts, Nanosalts, for Thermal Energy Storage of Concentrated Solar Thermal Power Generation</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI10">EI10: Towards High Specific Heat Molten Salts, Nanosalts, for Thermal Energy Storage of Concentrated Solar Thermal Power Generation</td>
 </tr>
 <tr>
 <td width="246">Hamed Riazi</td>
@@ -523,7 +547,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>14:40</strong></td>
-<td colspan="2" width="527">EI11: The Study of Soil-Water Characteristic Curve in Deformable Porous Media</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI11">EI11: The Study of Soil-Water Characteristic Curve in Deformable Porous Media</td>
 </tr>
 <tr>
 <td width="246">Amin Yousefnia Pasha</td>
@@ -541,15 +565,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 1</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>MEG02</strong></td>
 <td colspan="2" width="527"><strong>Fundamental and Enabling Sciences III (Day 1)</strong></p>
 <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#33CC33;" rowspan="2" width="57"><strong>15:30</strong></td>
-<td colspan="2" width="527">FS12: Investigation of Dynamic Crack Coalescence Using a Gypsum-like 3D Printing Material</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS12">FS12: Investigation of Dynamic Crack Coalescence Using a Gypsum-like 3D Printing Material</td>
 </tr>
 <tr>
 <td width="251">Chao Jiang</td>
@@ -557,7 +581,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#33CC33;" rowspan="2" width="57"><strong>15:50</strong></td>
-<td colspan="2" width="527">FS13: Experiment and Numerical Simulation Study of Shear Performance of Rock Bolt Under Static and Dynamic Loading Condition</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS13">FS13: Experiment and Numerical Simulation Study of Shear Performance of Rock Bolt Under Static and Dynamic Loading Condition</td>
 </tr>
 <tr>
 <td width="251">Li Li</td>
@@ -565,7 +589,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#33CC33;" rowspan="2" width="57"><strong>16:10</strong></td>
-<td colspan="2" width="527">FS14: Modelling of Ultrasonic Reactors</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS14">FS14: Modelling of Ultrasonic Reactors</td>
 </tr>
 <tr>
 <td width="251">Yezaz Gadi Man</td>
@@ -573,7 +597,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#33CC33;" rowspan="2" width="57"><strong>16:30</strong></td>
-<td colspan="2" width="527">FS15: Evaluating Cable-stayed Bridges Subjected to Blast Loading</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS15">FS15: Evaluating Cable-stayed Bridges Subjected to Blast Loading</td>
 </tr>
 <tr>
 <td width="251">Komeil Hashemiheidari</td>
@@ -581,7 +605,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#33CC33;" rowspan="2" width="57"><strong>16:50</strong></td>
-<td colspan="2" width="527">FS16: Vibration Based Gear Wear Monitoring</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS16">FS16: Vibration Based Gear Wear Monitoring</td>
 </tr>
 <tr>
 <td width="251">Chongqing Hu</td>
@@ -589,7 +613,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#33CC33;" rowspan="2" width="57"><strong>17:10</strong></td>
-<td colspan="2" width="527">FS17: Design of Rocket Nozzle Contours Using Conjugate Circular Arcs</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS17">FS17: Design of Rocket Nozzle Contours Using Conjugate Circular Arcs</td>
 </tr>
 <tr>
 <td width="251">Kyll Schomberg</td>
@@ -599,15 +623,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 2</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>ME102</strong></td>
 <td colspan="2" width="527"><strong>Energy and Infrastructure III (Day 1)</strong></p>
 <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#FFFFCC;" rowspan="2" width="57"><strong>15:30</strong></td>
-<td colspan="2" width="527">EI12: People’s Safety Decision in A Virtual Construction Simulator</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI12">EI12: People’s Safety Decision in A Virtual Construction Simulator</td>
 </tr>
 <tr>
 <td width="249">Xueqing Lu</td>
@@ -615,7 +639,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFFFCC;" rowspan="2" width="57"><strong>15:50</strong></td>
-<td colspan="2" width="527">EI13 Multi-Objective Optimisation in Construction</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI13">EI13 Multi-Objective Optimisation in Construction</td>
 </tr>
 <tr>
 <td width="249">Ahmed Hammad</td>
@@ -623,7 +647,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFFFCC;" rowspan="2" width="57"><strong>16:10</strong></td>
-<td colspan="2" width="527">EI14: Technology Adoption Decision Making in Construction</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI14">EI14: Technology Adoption Decision Making in Construction</td>
 </tr>
 <tr>
 <td width="249">Samad Sepasgozar</td>
@@ -631,7 +655,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFFFCC;" rowspan="2" width="57"><strong>16:30</strong></td>
-<td colspan="2" width="527">EI15: Estimation of Life Cycle Carbon of Residential and Office Building</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI15">EI15: Estimation of Life Cycle Carbon of Residential and Office Building</td>
 </tr>
 <tr>
 <td width="249">Zahra Moussavi Nadoushani</td>
@@ -651,15 +675,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 3</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>ME202</strong></td>
 <td colspan="2" width="527"><strong>Energy and Infrastructure IV (Day 1)</strong></p>
 <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>15:30</strong></td>
-<td colspan="2" width="527">EI16: Cascaded H-Bridge Converter Based STATCOM System Operating Under Extreme Low-Frequency Voltage Ripple on Capacitors</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI16">EI16: Cascaded H-Bridge Converter Based STATCOM System Operating Under Extreme Low-Frequency Voltage Ripple on Capacitors</td>
 </tr>
 <tr>
 <td width="247">Ghiaz Farivar</td>
@@ -667,7 +691,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>15:50</strong></td>
-<td colspan="2" width="527">EI17: Investigating Effects of p-n Junction Geometry in Silicon Solar Cells</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI17">EI17: Investigating Effects of p-n Junction Geometry in Silicon Solar Cells</td>
 </tr>
 <tr>
 <td width="247">Xinrui An</td>
@@ -675,7 +699,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>16:10</strong></td>
-<td colspan="2" width="527">EI18: A Real Time Temperature Monitoring and Diagnostic System for a Forced Cooled Supercapacitors String</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI18">EI18: A Real Time Temperature Monitoring and Diagnostic System for a Forced Cooled Supercapacitors String</td>
 </tr>
 <tr>
 <td width="247">Vita Lystianingrum</td>
@@ -683,7 +707,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>16:30</strong></td>
-<td colspan="2" width="527">EI19: High Efficiency Tandem Solar Cell on a Silicon Substrate: Optical Analysis, Design, and Performance Improvements</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI19">EI19: High Efficiency Tandem Solar Cell on a Silicon Substrate: Optical Analysis, Design, and Performance Improvements</td>
 </tr>
 <tr>
 <td width="247">Brianna Conrad</td>
@@ -691,7 +715,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>16:50</strong></td>
-<td colspan="2" width="527">EI20: Study of Beam Splitting Optical Filters Applied to Solar Hybrid PV/T Collectors</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI20">EI20: Study of Beam Splitting Optical Filters Applied to Solar Hybrid PV/T Collectors</td>
 </tr>
 <tr>
 <td width="247">Jose Crisostomo Munoz</td>
@@ -699,7 +723,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>17:10</strong></td>
-<td colspan="2" width="527">EI21: Ultra Thin Silicon Solar Cells</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI21">EI21: Ultra Thin Silicon Solar Cells</td>
 </tr>
 <tr>
 <td width="247">Jianshu Han</td>
@@ -707,25 +731,25 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 </tbody>
 </table>
-<table>
+<table class="day">
 <tbody>
 <tr>
-<td width="158"><strong>Day 2</strong></td>
-<td width="461"><strong>Tuesday 10<sup>th</sup> November 2015</strong></td>
+<td style="background:#9B30FF;" width="158"><font color="white"><strong>Day 2</strong></font></td>
+<td style="background:#9B30FF;" width="461"><font color="white"><strong>Tuesday 10<sup>th</sup> November 2015</strong></font></td>
 </tr>
 </tbody>
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 1</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>MEG02</strong></td>
 <td colspan="2" width="527"><strong>Fundamental and Enabling Sciences IV (Day 2)</strong></p>
 <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#66FF66;" rowspan="2" width="57"><strong>09:30</strong></td>
-<td colspan="2" width="527">FS18: Energy Storage and Return Prostheses: Developing a Biomechanical Model of Amputee Sprinting</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS18">FS18: Energy Storage and Return Prostheses: Developing a Biomechanical Model of Amputee Sprinting</td>
 </tr>
 <tr>
 <td width="244">Stacey Rigney</td>
@@ -733,7 +757,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#66FF66;" rowspan="2" width="57"><strong>09:50</strong></td>
-<td colspan="2" width="527">FS19: Convergence of Smartphone Technology and Algorithms that Estimate Physical Movement for Telehealth Assisted Rehabilitation</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS19">FS19: Convergence of Smartphone Technology and Algorithms that Estimate Physical Movement for Telehealth Assisted Rehabilitation</td>
 </tr>
 <tr>
 <td width="244">Michael Del Rosario</td>
@@ -741,31 +765,31 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#66FF66;" rowspan="2" width="57"><strong>10:10</strong></td>
-<td colspan="2" width="527">FS20: Striding Towards Fewer Falls: Using Inertial Sensors to Analyse Gait and Estimate Fall Risk in Older Adults</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS20">FS20: Striding Towards Fewer Falls: Using Inertial Sensors to Analyse Gait and Estimate Fall Risk in Older Adults</td>
 </tr>
 <tr>
 <td width="244">Kejia Wang</td>
 <td width="283">Graduate School of Biomedical Engineering</td>
 </tr>
 <tr>
-<td style="background:#66FF66;" rowspan="2" width="57"><strong>10:40</strong></td>
-<td colspan="2" width="527">FS21: Speech Affected by Depression: Paralinguistic Analysis, Modelling and Automatic Assessment</td>
+<td style="background:#66FF66;" rowspan="2" width="57"><strong>10:30</strong></td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS21">FS21: Speech Affected by Depression: Paralinguistic Analysis, Modelling and Automatic Assessment</td>
 </tr>
 <tr>
 <td width="244">Nicholas Cummins</td>
 <td width="283">Electrical Engineering &amp; Telecommunications</td>
 </tr>
 <tr>
-<td style="background:#33CC33;" rowspan="2" width="57"><strong>11:00</strong></td>
-<td colspan="2" width="527">FS22: Thin Film Thermal Conductivity Measurement and Modelling</td>
+<td style="background:#33CC33;" rowspan="2" width="57"><strong>10:50</strong></td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS22">FS22: Thin Film Thermal Conductivity Measurement and Modelling</td>
 </tr>
 <tr>
 <td width="244">Alireza Moridi Farimani</td>
 <td width="283">Mechanical &amp; Manufacturing Engineering</td>
 </tr>
 <tr>
-<td style="background:#33CC33;" rowspan="2" width="57"><strong>11:20</strong></td>
-<td colspan="2" width="527">FS23: A Direct Numerical Simulation Study of a Turbulent Non-premixed Lifted Flame</td>
+<td style="background:#33CC33;" rowspan="2" width="57"><strong>11:10</strong></td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS23">FS23: A Direct Numerical Simulation Study of a Turbulent Non-premixed Lifted Flame</td>
 </tr>
 <tr>
 <td width="244">Shahram Karami</td>
@@ -775,15 +799,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 2</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>ME102</strong></td>
 <td colspan="2" width="527"><strong>Digital Future III (Day 2)</strong></p>
   <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color="white"><strong>09:30</strong></font></td>
-<td colspan="2" width="527">DF13: Distributed Model Predictive Control based on Dissipativity Theory</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF13">DF13: Distributed Model Predictive Control based on Dissipativity Theory</td>
 </tr>
 <tr>
 <td width="244">Chaoxu Zheng</td>
@@ -791,7 +815,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color="white"><strong>09:50</strong></font></td>
-<td colspan="2" width="527">DF14: Personalize Air Pollution Exposure Using Wireless Sensor Network</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF14">DF14: Personalize Air Pollution Exposure Using Wireless Sensor Network</td>
 </tr>
 <tr>
 <td width="244">Ke Hu</td>
@@ -799,7 +823,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color="white"><strong>10:10</strong></font></td>
-<td colspan="2" width="527">DF15: Robust Fast Control of Vectored Thrust Aerial Vehicles via Variable Structure Methods</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF15">DF15: Robust Fast Control of Vectored Thrust Aerial Vehicles via Variable Structure Methods</td>
 </tr>
 <tr>
 <td width="244">Hiranya Jayakody</td>
@@ -807,7 +831,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color="white"><strong>10:40</strong></font></td>
-<td colspan="2" width="527">DF16: Hybrid Dual-Mode Low Voltage Dropout Regulator with Infinite Impulse Response Digital Filters</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF16">DF16: Hybrid Dual-Mode Low Voltage Dropout Regulator with Infinite Impulse Response Digital Filters</td>
 </tr>
 <tr>
 <td width="244">David Phoon</td>
@@ -815,7 +839,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color="white"><strong>11:00</strong></font></td>
-<td colspan="2" width="527">DF17: Path Tracking of Agricultural Vehicles</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF17">DF17: Path Tracking of Agricultural Vehicles</td>
 </tr>
 <tr>
 <td width="244">Javad Taghia</td>
@@ -823,7 +847,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color="white"><strong>11:20</strong></font></td>
-<td colspan="2" width="527">DF18: Building Change Detection from Remotely Sensed Data Using Machine Learning Techniques</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF18">DF18: Building Change Detection from Remotely Sensed Data Using Machine Learning Techniques</td>
 </tr>
 <tr>
 <td width="244">Kaibin Zong</td>
@@ -833,15 +857,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 3</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>ME202</strong></td>
 <td colspan="2" width="527"><strong>Energy and Infrastructure V (Day 2)</strong></p>
 <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>09:30</strong></td>
-<td colspan="2" width="527">EI22: Active Power Control in an Islanded Microgrid Using DC Link Voltage Status</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI22">EI22: Active Power Control in an Islanded Microgrid Using DC Link Voltage Status</td>
 </tr>
 <tr>
 <td width="248">Md. Alamgir Hossain</td>
@@ -849,7 +873,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>09:50</strong></td>
-<td colspan="2" width="527">EI23: Forecasting for Concentrated Solar Thermal Power Plants in Australia</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI23">EI23: Forecasting for Concentrated Solar Thermal Power Plants in Australia</td>
 </tr>
 <tr>
 <td width="248">Edward Law</td>
@@ -857,7 +881,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>10:10</strong></td>
-<td colspan="2" width="527">EI24: Multilevel Multiphase Coupled Inductor Inverter</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI24">EI24: Multilevel Multiphase Coupled Inductor Inverter</td>
 </tr>
 <tr>
 <td width="248">Cheng Tan</td>
@@ -865,7 +889,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF6600;" rowspan="2" width="57"><strong>10:40</strong></td>
-<td colspan="2" width="527">EI25: Single-Phase Grid Connected Battery-Supercapacitor Hybrid Energy Storage System</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI25">EI25: Single-Phase Grid Connected Battery-Supercapacitor Hybrid Energy Storage System</td>
 </tr>
 <tr>
 <td width="248">Damith Wickramasinghe Abeywardana</td>
@@ -873,7 +897,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFCC00;" rowspan="2" width="57"><strong>11:00</strong></td>
-<td colspan="2" width="527">EI26: Developing Bi/Er doped Fibers for Ultra Broadband Optical Amplification</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI26">EI26: Developing Bi/Er doped Fibers for Ultra Broadband Optical Amplification</td>
 </tr>
 <tr>
 <td width="248">Amirhassan Zareanborji</td>
@@ -896,15 +920,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 1</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>MEG02</strong></td>
 <td colspan="2" width="527"><strong>Fundamental and Enabling Sciences V (Day 2)</strong></p>
 <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#66FF66;" rowspan="2" width="57"><strong>13:00</strong></td>
-<td colspan="2" width="527">FS24: Open Channel Microneedles Fabrication by 3D Laser Lithography and Micromoulding Techniques</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS24">FS24: Open Channel Microneedles Fabrication by 3D Laser Lithography and Micromoulding Techniques</td>
 </tr>
 <tr>
 <td width="248">Zahra Faraji Rad</td>
@@ -912,7 +936,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#66FF66;" rowspan="2" width="57"><strong>13:20</strong></td>
-<td colspan="2" width="527">FS25: Retinal Ganglion Cell Responses to Extracellular Microelectrode Stimulation – An In Vitro Study On Selective Activation and Spatial Activation Extent With High Frequency Stimulation and Different Electrode Configurations</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS25">FS25: Retinal Ganglion Cell Responses to Extracellular Microelectrode Stimulation – An In Vitro Study On Selective Activation and Spatial Activation Extent With High Frequency Stimulation and Different Electrode Configurations</td>
 </tr>
 <tr>
 <td width="248">Chih Yu Yang</td>
@@ -920,7 +944,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#66FF66;" rowspan="2" width="57"><strong>13:40</strong></td>
-<td colspan="2" width="527">FS26: 3D Neuronal Networks in Hydrogels for Living Bionic Device Interfaces</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS26">FS26: 3D Neuronal Networks in Hydrogels for Living Bionic Device Interfaces</td>
 </tr>
 <tr>
 <td width="248">Ulises Aregueta Robles</td>
@@ -928,7 +952,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#66FF66;" rowspan="2" width="57"><strong>14:00</strong></td>
-<td colspan="2" width="527">FS27: Drug Delivery Vehicles Based on Albumin-polymer Conjugation for Cancer Therapeutics</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS27">FS27: Drug Delivery Vehicles Based on Albumin-polymer Conjugation for Cancer Therapeutics</td>
 </tr>
 <tr>
 <td width="248">Yanyan Jiang</td>
@@ -936,7 +960,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#CCFF99;" rowspan="2" width="57"><strong>14:20</strong></td>
-<td colspan="2" width="527">FS28: Preparation of Novel Materials With Synthetic Heterocyclic Catechol Derivatives Via The Self-Polymerization Regime of Dopamine</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS28">FS28: Preparation of Novel Materials With Synthetic Heterocyclic Catechol Derivatives Via The Self-Polymerization Regime of Dopamine</td>
 </tr>
 <tr>
 <td width="248">Ka Fan</td>
@@ -944,7 +968,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#CCFF99;" rowspan="2" width="57"><strong>14:40</strong></td>
-<td colspan="2" width="527">FS29: Quantitive Wear Particle Analysis for Osteoarthritis (OA) Assessment</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS29">FS29: Quantitive Wear Particle Analysis for Osteoarthritis (OA) Assessment</td>
 </tr>
 <tr>
 <td width="248">Meizhai Guo</td>
@@ -954,15 +978,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 2</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>ME102</strong></td>
 <td colspan="2" width="527"><strong>Digital Future IV (Day 2)</strong></p>
   <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#2D96FF;" rowspan="2" width="57"><strong>13:00</strong></td>
-<td colspan="2" width="527">DF19: Cryogenic Electronics for Quantum Computer Interface: A Low Temperature CMOS D/A Converter for Si Quantum Computer Controller Circuit</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF19">DF19: Cryogenic Electronics for Quantum Computer Interface: A Low Temperature CMOS D/A Converter for Si Quantum Computer Controller Circuit</td>
 </tr>
 <tr>
 <td width="245">Md Tanvir Rahman</td>
@@ -970,15 +994,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#2D96FF;" rowspan="2" width="57"><strong>13:20</strong></td>
-<td colspan="2" width="527">DF20: The Development of A Model Predictive Control Approach for Paste Thickeners</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF20">DF20: The Development of A Model Predictive Control Approach for Paste Thickeners</td>
 </tr>
 <tr>
-<td width="245">Chee Kong Tan</td>
+<td width="245">Chee Keong Tan</td>
 <td width="282">Chemical Engineering</td>
 </tr>
 <tr>
 <td style="background:#2D96FF;" rowspan="2" width="57"><strong>13:40</strong></td>
-<td colspan="2" width="527">DF21: Coherent Feedback Networks For Generation and Distribution Of Entanglement</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF21">DF21: Coherent Feedback Networks For Generation and Distribution Of Entanglement</td>
 </tr>
 <tr>
 <td width="245">Zhan Shi</td>
@@ -986,7 +1010,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color="white"><strong>14:00</strong></font></td>
-<td colspan="2" width="527">DF22: Dynamic Adaptation of HTTP-based Video Streaming using Markov Decision Process</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF22">DF22: Dynamic Adaptation of HTTP-based Video Streaming using Markov Decision Process</td>
 </tr>
 <tr>
 <td width="245">Ayub Bokani</td>
@@ -994,7 +1018,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#1D53FF;" rowspan="2" width="57"><font color="white"><strong>14:20</strong></font></td>
-<td colspan="2" width="527">DF23: Integrating Cache Locking and Task Scheduling for Real-Time Embedded Systems</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#DF23">DF23: Integrating Cache Locking and Task Scheduling for Real-Time Embedded Systems</td>
 </tr>
 <tr>
 <td width="245">Wenguang Zheng</td>
@@ -1009,15 +1033,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 3</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>ME202</strong></td>
 <td colspan="2" width="527"><strong>Energy and Infrastructure VI (Day 2)</strong></p>
   <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#FFFF66;" rowspan="2" width="57"><strong>13:00</strong></td>
-<td colspan="2" width="527">EI27: Multidisciplinary Approach to Understanding Groundwater Changes in the Coal Mining Environment</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI27">EI27: Multidisciplinary Approach to Understanding Groundwater Changes in the Coal Mining Environment</td>
 </tr>
 <tr>
 <td width="248">Katarina David</td>
@@ -1025,7 +1049,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFFF66;" rowspan="2" width="57"><strong>13:20</strong></td>
-<td colspan="2" width="527">EI28: Spatial and Temporal Importance of Diffuse and Stream Recharge in Semiarid Environments: Implications for Integrated Water Management</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI28">EI28: Spatial and Temporal Importance of Diffuse and Stream Recharge in Semiarid Environments: Implications for Integrated Water Management</td>
 </tr>
 <tr>
 <td width="248">Calvin Li</td>
@@ -1033,7 +1057,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFFF66;" rowspan="2" width="57"><strong>13:40</strong></td>
-<td colspan="2" width="527">EI29: Advanced Characterisation of Dissolved Organic Nitrogen in Drinking Water Sources: Implications for Mitigating Against Nitrogenous Disinfection By-product Formation</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI29">EI29: Advanced Characterisation of Dissolved Organic Nitrogen in Drinking Water Sources: Implications for Mitigating Against Nitrogenous Disinfection By-product Formation</td>
 </tr>
 <tr>
 <td width="248">Xiang Li</td>
@@ -1041,7 +1065,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFFF66;" rowspan="2" width="57"><strong>14:00</strong></td>
-<td colspan="2" width="527">EI30: Dynamical Downscaling of Global Reanalysis for Hydrological Applications</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI30">EI30: Dynamical Downscaling of Global Reanalysis for Hydrological Applications</td>
 </tr>
 <tr>
 <td width="248">Ditiro Moalafhi</td>
@@ -1049,7 +1073,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF9900;" rowspan="2" width="57"><strong>14:20</strong></td>
-<td colspan="2" width="527">EI31: Modeling Risk Attitudes and Risk Perception in Driving Behaviour</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI31">EI31: Modeling Risk Attitudes and Risk Perception in Driving Behaviour</td>
 </tr>
 <tr>
 <td width="248">Jianhang Chen</td>
@@ -1057,7 +1081,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FF9900;" rowspan="2" width="57"><strong>14:40</strong></td>
-<td colspan="2" width="527">EI32: A Joint Constitutive Model for Opened Rock Joints</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI32">EI32: A Joint Constitutive Model for Opened Rock Joints</td>
 </tr>
 <tr>
 <td width="248">Yingchun Li</td>
@@ -1075,15 +1099,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 1</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>MEG02</strong></td>
 <td colspan="2" width="527"><strong>Fundamental and Enabling Sciences VI (Day 2)</strong></p>
 <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#CCFF99;" rowspan="2" width="57"><strong>15:30</strong></td>
-<td colspan="2" width="527">FS30: Improving the Performance of Nanocomposite Membranes By Incorporating Inorganic Fillers for Gas Separation</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS30">FS30: Improving the Performance of Nanocomposite Membranes By Incorporating Inorganic Fillers for Gas Separation</td>
 </tr>
 <tr>
 <td width="244">Putu Sutrisna</td>
@@ -1091,7 +1115,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#CCFF99;"  rowspan="2" width="57"><strong>15:50</strong></td>
-<td colspan="2" width="527">FS31: The Durability of Geopolymer Concrete in Marine Environments</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS31">FS31: The Durability of Geopolymer Concrete in Marine Environments</td>
 </tr>
 <tr>
 <td width="244">Mahdi Babaee</td>
@@ -1099,7 +1123,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#33CC33;" rowspan="2" width="57"><strong>16:10</strong></td>
-<td colspan="2" width="527">FS32: Silicon Quantum Computing Devices</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS32">FS32: Silicon Quantum Computing Devices</td>
 </tr>
 <tr>
 <td width="244">Jason Hwang</td>
@@ -1107,7 +1131,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#33CC33;" rowspan="2" width="57"><strong>16:30</strong></td>
-<td colspan="2" width="527">FS33: Design and Operation of the Building Blocks of a Spins-in-silicon Quantum Computer</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS33">FS33: Design and Operation of the Building Blocks of a Spins-in-silicon Quantum Computer</td>
 </tr>
 <tr>
 <td width="244">Rachpon Kalra</td>
@@ -1115,7 +1139,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#33CC33;" rowspan="2" width="57"><strong>16:50</strong></td>
-<td colspan="2" width="527">FS34: Electrical Detection of Single-atom Quantum Spectroscopy</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#FS34">FS34: Electrical Detection of Single-atom Quantum Spectroscopy</td>
 </tr>
 <tr>
 <td width="244">Solomon Freer</td>
@@ -1130,15 +1154,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 2</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>ME102</strong></td>
 <td colspan="2" width="527"><strong>Energy and Infrastructure VII (Day 2)</strong></p>
   <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#FFCC00;" rowspan="2" width="57"><strong>15:30</strong></td>
-<td colspan="2" width="527">EI33: Modelling Disrupted Network Behaviour</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI33">EI33: Modelling Disrupted Network Behaviour</td>
 </tr>
 <tr>
 <td width="249">Kasun Wijayaratna</td>
@@ -1146,7 +1170,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFCC00;" rowspan="2" width="57"><strong>15:50</strong></td>
-<td colspan="2" width="527">EI34: Modeling Risk Attitudes and Risk Perception in Driving Behaviour</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI34">EI34: Modeling Risk Attitudes and Risk Perception in Driving Behaviour</td>
 </tr>
 <tr>
 <td width="249">Chenyang Li</td>
@@ -1154,7 +1178,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFCC00;" rowspan="2" width="57"><strong>16:10</strong></td>
-<td colspan="2" width="527">EI35: Mobile Phone Distraction and Traffic Safety</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI35">EI35: Mobile Phone Distraction and Traffic Safety</td>
 </tr>
 <tr>
 <td width="249">Asif Hassan</td>
@@ -1162,7 +1186,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFCC00;" rowspan="2" width="57"><strong>16:30</strong></td>
-<td colspan="2" width="527">EI36: Traffic Information System Based Traffic Management and Control</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI36">EI36: Traffic Information System Based Traffic Management and Control</td>
 </tr>
 <tr>
 <td width="249">Tuo Mao</td>
@@ -1170,7 +1194,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFCC00;" rowspan="2" width="57"><strong>16:50</strong></td>
-<td colspan="2" width="527">EI37: Methodologies for Origin-Destination Travel Demand Estimation within a Strategic Traffic Assignment Model</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI37">EI37: Methodologies for Origin-Destination Travel Demand Estimation within a Strategic Traffic Assignment Model</td>
 </tr>
 <tr>
 <td width="249">Tao Wen</td>
@@ -1178,7 +1202,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFCC00;" rowspan="2" width="57"><strong>17:10</strong></td>
-<td colspan="2" width="527">EI38: The Demand and Supply Modelling of Carsharing Systems</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI38">EI38: The Demand and Supply Modelling of Carsharing Systems</td>
 </tr>
 <tr>
 <td width="249">Sisi Jian</td>
@@ -1188,15 +1212,15 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </table>
 <table>
 <tbody>
-<tr>
-<td colspan="1" width="57"><strong>Room 3</strong></td>
+<tr class="header">
+<td colspan="1" width="57"><strong>ME202</strong></td>
 <td colspan="2" width="527"><strong>Energy and Infrastructure VIII (Day 2)</strong></p>
   <p>Chair:</td>
 </tr>
 <tr>
 
 <td style="background:#FFFFCC;" rowspan="2" width="57"><strong>15:30</strong></td>
-<td colspan="2" width="527">EI39: Development of Steel-Timber Composite (STC)  Floors for Large Scale Construction</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI39">EI39: Development of Steel-Timber Composite (STC)  Floors for Large Scale Construction</td>
 </tr>
 <tr>
 <td width="251">Amirhossein Hassanieh</td>
@@ -1204,7 +1228,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFFFCC;" rowspan="2" width="57"><strong>15:50</strong></td>
-<td colspan="2" width="527">EI40: Finite Element Model for Analysis of Buckling and Post-buckling Behaviour of Continuous Concrete Pavement Blow-ups</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI40">EI40: Finite Element Model for Analysis of Buckling and Post-buckling Behaviour of Continuous Concrete Pavement Blow-ups</td>
 </tr>
 <tr>
 <td width="251">Yang Yang</td>
@@ -1212,7 +1236,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFCC00;" rowspan="2" width="57"><strong>16:10</strong></td>
-<td colspan="2" width="527">EI41: Disaggregate Behavioural Land Use Modelling: Integration of Housing Search, Job Search and Households&#8217; Dynamics</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI41">EI41: Disaggregate Behavioural Land Use Modelling: Integration of Housing Search, Job Search and Households&#8217; Dynamics</td>
 </tr>
 <tr>
 <td width="251">Milad Ghasrikhouzani</td>
@@ -1220,7 +1244,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFFF66;" rowspan="2" width="57"><strong>16:30</strong></td>
-<td colspan="2" width="527">EI42: Will Flooding Intensify in a Warmer Climate?</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI42">EI42: Will Flooding Intensify in a Warmer Climate?</td>
 </tr>
 <tr>
 <td width="251">Conrad Wasko</td>
@@ -1228,7 +1252,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 <tr>
 <td style="background:#FFFF66;" rowspan="2" width="57"><strong>16:50</strong></td>
-<td colspan="2" width="527">EI43: Nitrifying Biofilm Control Through the Utilisation of Catalytically Generated Nitric Oxide</td>
+<td colspan="2" width="527"><a href = "pgabstract.html#EI43">EI43: Nitrifying Biofilm Control Through the Utilisation of Catalytically Generated Nitric Oxide</td>
 </tr>
 <tr>
 <td width="251">Vita Wonoputri</td>
@@ -1241,18 +1265,18 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 </tbody>
 </table>
-<table>
+<table class="day">
 <tbody>
 <tr>
-<td width="158"><strong>Day 3</strong></td>
-<td width="461"><strong>Wednesday 11<sup>th</sup> November 2015</strong></td>
+<td style="background:#CD96CD;" width="158"><font color="white"><strong>Day 3</strong></font></td>
+<td style="background:#CD96CD;" width="461"><font color="white"><strong>Wednesday 11<sup>th</sup> November 2015</strong></font></td>
 </tr>
 </tbody>
 </table>
 <table>
 <tbody>
 <tr>
-<td colspan="1" width="57"><strong>Room 1</strong></td>
+<td colspan="1" width="57"><strong>MEG02</strong></td>
 <td colspan="3" width="527"><strong>Finalists</strong></p>
 <p>Chair:</td>
 </tr>
@@ -1306,7 +1330,7 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 </tr>
 </tbody>
 </table>
-
+</div>
 			</div><!-- .entry-content -->
 
 	<div class="entry-format">
@@ -1321,150 +1345,5 @@ function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!
 
 
 	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com</a>.
-			<span class="sep"> | </span>
-			<a href="https://wordpress.com/themes/minnow/" title="Learn more about this theme">The Minnow Theme</a>.		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
-		<script type="text/javascript">
-		//<![CDATA[
-		var infiniteScroll = {"settings":{"id":"main","ajaxurl":"https:\/\/unsw824.wordpress.com\/?infinity=scrolling","type":"scroll","wrapper":true,"wrapper_class":"infinite-wrap","footer":"primary","click_handle":"1","text":"Older posts","totop":"Scroll back to top","currentday":"22.10.15","order":"DESC","scripts":[],"styles":[],"google_analytics":false,"offset":0,"history":{"host":"unsw824.wordpress.com","path":"\/page\/%d\/","use_trailing_slashes":true,"parameters":""},"query_args":{"error":"","m":"","p":0,"post_parent":"","subpost":"","subpost_id":"","attachment":"","attachment_id":0,"name":"","static":"","pagename":"","page_id":0,"second":"","minute":"","hour":"","day":0,"monthnum":0,"year":0,"w":0,"category_name":"","tag":"","cat":"","tag_id":"","author":"","author_name":"","feed":"","tb":"","paged":0,"comments_popup":"","meta_key":"","meta_value":"","preview":"","s":"","sentence":"","fields":"","menu_order":"","category__in":[],"category__not_in":[],"category__and":[],"post__in":[],"post__not_in":[],"tag__in":[],"tag__not_in":[],"tag__and":[],"tag_slug__in":[],"tag_slug__and":[],"post_parent__in":[],"post_parent__not_in":[],"author__in":[],"author__not_in":[],"posts_per_page":7,"ignore_sticky_posts":false,"suppress_filters":false,"cache_results":false,"update_post_term_cache":true,"update_post_meta_cache":true,"post_type":"","nopaging":false,"comments_per_page":"50","no_found_rows":false,"order":"DESC"},"last_post_date":"2015-10-22 05:21:19","stats":"blog=101543415&v=wpcom&tz=0&user_id=0&subd=unsw824&x_pagetype=infinite"}};
-		//]]>
-		</script>
-		<!-- wpcom_wp_footer -->
-<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201543y'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var WPGroHo = {"my_hash":""};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781g'></script>
-
-	<script>
-		//initialize and attach hovercards to all gravatars
-		jQuery( document ).ready( function( $ ) {
-
-			if (typeof Gravatar === "undefined"){
-				return;
-			}
-
-			if ( typeof Gravatar.init !== "function" ) {
-				return;
-			}			
-
-			Gravatar.profile_cb = function( hash, id ) {
-				WPGroHo.syncProfileData( hash, id );
-			};
-			Gravatar.my_hash = WPGroHo.my_hash;
-			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
-		});
-	</script>
-
-		<div style="display:none">
-	</div>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/unsw824.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/unsw824.wordpress.com\/wp-login.php?action=logout&_wpnonce=7cc06ea9dd","homeURL":"https:\/\/unsw824.wordpress.com\/","postID":"2","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"0","text_direction":"ltr"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://s2.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1424115551j'></script>
-		<div id="infinite-footer">
-			<div class="container">
-				<div class="blog-info">
-					<a id="infinity-blog-title" href="https://unsw824.wordpress.com/" rel="home">
-						Postgraduate Research Symposium					</a>
-				</div>
-				<div class="blog-credits"></div>
-			</div>
-		</div><!-- #infinite-footer -->
-		
-	<div id="bit" class="loggedout-follow-normal"></div>
-	<div id="carousel-reblog-box">
-	  
-	  <div class="arrow"></div>
-	</div>
-<link rel='stylesheet' id='all-css-0' href='https://s2.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1438295886g' type='text/css' media='all' />
-<!--[if lte IE 8]>
-<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825g&#038;ver=20121024' type='text/css' media='all' />
-<![endif]-->
-<link rel='stylesheet' id='all-css-2' href='https://s0.wp.com/wp-content/mu-plugins/tiled-gallery/tiled-gallery.css?m=1443731146g' type='text/css' media='all' />
-<script type='text/javascript'>
-/* <![CDATA[ */
-var jetpackSlideshowSettings = {"spinner":"https:\/\/s1.wp.com\/wp-content\/mu-plugins\/shortcodes\/img\/slideshow-loader.gif","blog_id":"101543415","blog_subdomain":"unsw824","user_id":"0"};
-/* ]]> */
-</script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var JetpackEmojiSettings = {"base_url":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/emoji\/twemoji\/"};
-/* ]]> */
-</script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/unsw824.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"fb24b1efb4","display_exif":"1","display_geo":"1","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/unsw824.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Funsw824.wordpress.com%2F2015%2F10%2F22%2F2%2F","local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=101543415&v=wpcom&tz=0&user_id=0&subd=unsw824","is_public":"0"};
-var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/unsw824.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"fb24b1efb4","display_exif":"1","display_geo":"1","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/unsw824.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Funsw824.wordpress.com%2F2015%2F10%2F22%2F2%2F","local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=101543415&v=wpcom&tz=0&user_id=0&subd=unsw824","is_public":"0"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyNkEFSwzAMRS+EazoEWDGcxVWVRo4tmciOye1JyyRDuwhZ+Vt+T/LI1mRAOCNn69WecSTA9H3w+mT/PMViUigXYrXELTHlaQ0brHYyZJAz6rW5/yo4TAeYIOBuSQPNqZNq1vqjmzuMM5zKyUZilnr1ftMulN1IF5dJeBeuPSUTiHvTChQ1LW2tC6N4srnenf/yHnNy0Jt99B1FDKEsy6utnDxCfmyx+OO8XLFOFfNNuN3TgKobQ8ENUhTD+sulMDuf8ePYNM3x9e395dn/AOvT5DQ='></script>
-<script type='text/javascript' src='https://platform.twitter.com/widgets.js?ver=20111117'></script>
-<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyVy7EOQEAMANAfUnViYBDfgmsupepyivh7VpMY3/DwjDCuaqSGyw5R9sC6oZ1sRgkG6cd54OQhMqHSQYnUs4Z82jL8c+P3YyEPoRehdL31rG5pXVXUTVO70k03DU5D1g=='></script>
-<script type="text/javascript">
-// <![CDATA[
-(function() {
-try{
-  if ( window.external &&'msIsSiteMode' in window.external) {
-    if (window.external.msIsSiteMode()) {
-      var jl = document.createElement('script');
-      jl.type='text/javascript';
-      jl.async=true;
-      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(jl, s);
-    }
-  }
-}catch(e){}
-})();
-// ]]>
-</script>	<script type="text/javascript">
-	var skimlinks_pub_id = "725X584219"
-	var skimlinks_sitename = "unsw824.wordpress.com";
-	</script>
-	<script type="text/javascript" src="https://s.skimresources.com/js/725X1342.skimlinks.js"></script><script type="text/javascript">
-			jQuery.extend( infiniteScroll.settings.scripts, ["jquery","jquery-core","jquery-migrate","mobile-useragent-info","postmessage","jquery_inview","jetpack_resize","loggedout-subscribe","spin","jquery.spin","grofiles-cards","wpgroho","jquery.autoresize","highlander-comments","devicepx","the-neverending-homepage","jquery-cycle","jetpack-slideshow","minnow-script","minnow-navigation","minnow-skip-link-focus-fix","twemoji","jetpack-emoji","jetpack-emoji-init","swfobject","videopress","jetpack-carousel","twitter-widgets","twitter-widgets-infinity","twitter-widgets-pending","tiled-gallery"] );
-			jQuery.extend( infiniteScroll.settings.styles, ["smileyproject","jetpack_likes","loggedout-subscribe","the-neverending-homepage","jetpack-slideshow","wpcom-core-compat-playlist-styles","mp6hacks","wpcom-bbpress2-staff-css","genericons","minnow-style","minnow-wpcom","jetpack-emoji-css","noticons","geo-location-flair","reblogging","a8c-global-print","h4-global","minnow-opensans","highlander-comments","highlander-comments-ie7","jetpack-carousel","tiled-gallery","jetpack-carousel-ie8fix"] );
-		</script><script src="//stats.wp.com/w.js?48" type="text/javascript" async defer></script>
-<script type="text/javascript">
-_tkq = window._tkq || [];
-_stq = window._stq || [];
-_tkq.push(['storeContext', {'blog_id':'101543415','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
-_stq.push(['view', {'blog':'101543415','v':'wpcom','tz':'0','user_id':'0','subd':'unsw824'}]);
-_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mN3FZZmo1ciV5XXJsZ24wUjJacUxGNiVZTFVrcE5oXWpRVHxmVj9kRkFUa004LnlMNklZSko4MnJUP0MlbFdxT0RUSmNSa0tWaWV8X0Q2T0hlZkxQTnBON3ZiTkQlTHhORDZBLXpYdjJ6MmgtJWxOdltLbmUuUkg5NmRSQUxFMGpFUT1KUHl0S34mRksxbTZzeVZheFgvMmN6dUxxejRTc2JjMnh2TnQwXTh3Ti1yQyVdOVt+WFdxSjJuUWhReE53eTgzJWVtelFfcHhfT3dMU2cvbT1IaDRSUnhQNDk/cEgwUXJpakN1MVVYWU94M2osKy55MC92ZCxjYVJhfEhjQWsuUmpEQlluLGg0ZFBSL1Mx'}]);
-_stq.push([ 'clickTrackerInit', '101543415', '0' ]);
-	</script>
-<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
-<script>
-if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
-
-	wpcom_mobile_user_agent_info.init();
-	var mobileStatsQueryString = "";
-	
-	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
-		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
-	
-	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
-		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
-	
-	if( wpcom_mobile_user_agent_info.isIPad() )
-		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
-
-	if( "" != mobileStatsQueryString ) {
-		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
-	}
-	
-}
-</script>
 </body>
 </html>
